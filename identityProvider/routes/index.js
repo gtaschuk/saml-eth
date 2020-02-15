@@ -1,33 +1,28 @@
 const dotenv = require("dotenv");
 const routes = require("express").Router();
 const passport = require("passport");
+
+const { parseSamlRequest, parseLogoutRequest } = require('../controllers/samlController')
+const { signIn, signOut } = require('../controllers/sessionController')
+
+
 //const isAuthenticated = require("../middlewares/isAuthenticated");
 
 dotenv.config();
 
-//routes.get("/signIn", isAuthenticated, signIn);
+// SSO
+routes.get(['/', '/idp', '/saml/sso'], parseSamlRequest);
+routes.post(['/', '/idp', '/saml/sso'], parseSamlRequest);
 
-//routes.post("/login", (req, res, next) => {
-  //passport.authenticate("local", (err, user, info) => {
-    //if (err) {
-      //return next(err);
-    //}
-    //if (!user) {
-      //return res.sendStatus(401);
-    //}
-    //req.logIn(user, err => {
-      //if (err) {
-        //return next(err);
-      //}
-      //return res.json(user);
-    //});
-  //})(req, res, next);
-//});
+// SLO
+routes.get('/saml/slo', parseLogoutRequest);
+routes.post('/saml/slo', parseLogoutRequest);
 
-//routes.get("/logout", (req, res) => {
-  //req.logout();
-  //res.status(200).json({ success: "Logged out successfully" });
-//});
+// Sign In Route (takes signed message from keepkey and validates against rbac
+routes.post("/saml/signIn", signIn);
+
+// Sign Out request
+routes.get("/saml/signOut", signOut);
 
 routes.get("/", (req, res) => res.json({ msg: "SAML IDP" }));
 
