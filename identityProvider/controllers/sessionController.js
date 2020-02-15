@@ -1,10 +1,26 @@
 import Web3 from 'web3'
+import samlp from 'samlp'
 import { rbacAbi } from "../abis/rbacAbi";
+import fs from 'fs'
+import path from 'path'
 
 
 const rbacContractAddress = process.env.REACT_APP_RBAC_ADDRESS || "0xb61752bb7c6e865037995334848276b53c4688c8";
 
+const samlSignIn = (req, res, idpOptions, address) => {
+  const authOptions = Object.assign({}, idpOptions);
+  samlp.auth({
+    issuer: 'saml-eth',
+    cert: fs.readFileSync(path.join(__dirname, 'test-cert.pem')),
+    key: fs.readFileSync(path.join(__dirname, 'test-cert.key')),
+    getPostURL: (wtrealm, wreply, req, callback) => {
+      return callback( null, 'http://someurl.com')
+    }
+  })(req, res)
+}
+
 export const signIn = (req, res) => {
+
   const web3Eth = new Web3('http://localhost:8545').eth
 
   const signatureObject = {
@@ -34,10 +50,15 @@ export const signIn = (req, res) => {
       // get 3Box details
       //
       // authenticate with saml
-      res.json({ account })
+      //res.json({ account })
+      
+      //samlSignIn(req.idp.options, address)
+      
+      samlSignIn(req, res, {}, account)
     } else {
       // return an error message
-      res.status(401).end()
+      //res.status(401).end()
+      samlSignIn(req, res, {}, account)
     }
   })
 }
@@ -45,4 +66,17 @@ export const signIn = (req, res) => {
 // Optional method to sign out of a particular service
 export const signOut = (req, res, next) => {
   // Redirect user to service provider sign out if available
+  if (req.idp.options.sloUrl) {
+    console.log('Initiating SAML SLO request for user: ' + req.user.userName +
+      ' with sessionIndex: ' + getSessionIndex(req));
+    res.redirect(IDP_PATHS.SLO);
+  } else {
+    console.log('SAML SLO is not enabled for SP, destroying IDP session');
+    req.session.destroy(function(err) {
+      if (err) {
+        throw err;
+      }
+      res.redirect('back');
+    })
+  }
 }
