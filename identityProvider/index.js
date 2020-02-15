@@ -29,19 +29,17 @@ app.use(cors(corsOptions));
 app.options('*', cors(corsOptions))
 
 app.use(express.static(path.join(__dirname, "build")));
-app.use(require("cookie-parser")());
+//app.use(require("cookie-parser")());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-configureAuth(app);
+//configureAuth(app);
 app.use("/", routes);
 
 const port = process.env.PORT || "8080";
 app.set("port", port);
 
-models.sequelize.sync().then(() => {
-  const server = http.createServer(app);
-  server.listen(port, () =>
-    debug("Express server listening on port " + server.address().port)
-  );
-  server.on("listening", () => debug(`Listening on port ${server.address()}`));
-});
+const server = http.createServer(app);
+server.listen(port, () =>
+  console.log("Express server listening on port " + server.address().port)
+);
+server.on("listening", () => console.log(`Listening on port ${server.address()}`));
