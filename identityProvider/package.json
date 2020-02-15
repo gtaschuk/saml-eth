@@ -5,6 +5,8 @@
   "dependencies": {
     "@types/lodash": "^4.14.149",
     "@types/node": "12.11.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "bcryptjs": "^2.4.3",
     "bignumber.js": "6.0.0",
     "body-parser": "^1.19.0",
@@ -14,13 +16,15 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "lodash": "^4.17.15",
+    "nodemon": "^2.0.2",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "typescript": "3.6.4",
     "web3": "^1.2.5-rc.0"
   },
   "scripts": {
-    "start": "node index.js",
+    "build": "babel --presets es2015 -d lib/ src",
+    "start": "nodemon --exec babel-node index.js",
     "server": "node index.js"
   }
 }
