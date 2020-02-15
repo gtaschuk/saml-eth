@@ -66,18 +66,6 @@ module.exports = {
       network_id: 4,
       gas,
       gasPrice
-    },
-    geth: {
-      // for single account
-      host: "http://10.14.68.157",
-      port: 8545,
-      network_id: 45634
-    },
-    gethLocal: {
-      // for single account
-      host: "http://localhost",
-      port: 8545,
-      network_id: 45634
     }
   },
   mocha: {},
