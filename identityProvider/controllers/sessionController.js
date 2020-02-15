@@ -1,4 +1,8 @@
 import Web3 from 'web3'
+import { rbacAbi } from "../abis/rbacAbi";
+
+
+const rbacContractAddress = process.env.REACT_APP_RBAC_ADDRESS || "0xb61752bb7c6e865037995334848276b53c4688c8";
 
 export const signIn = (req, res) => {
   const web3Eth = new Web3('http://localhost:8545').eth
@@ -16,14 +20,26 @@ export const signIn = (req, res) => {
 
 
   const account = web3Eth.accounts.recover(message, signature)
-  res.json({ account })
-  
-  // check in smart contract
-  
 
-  // if all looks good, samlp.auth
+  const transactionParameters = {}
+  const rbacContract = new web3Eth.Contract(
+    rbacAbi,
+    rbacContractAddress,
+    transactionParameters
+  );
 
-  // Generate SAML response and create session
+  rbacContract.methods.userExists(account).call({}, (err, userExists) => {
+    console.log(userExists)
+    if (userExists) {
+      // get 3Box details
+      //
+      // authenticate with saml
+      res.json({ account })
+    } else {
+      // return an error message
+      res.status(401).end()
+    }
+  })
 }
 
 // Optional method to sign out of a particular service
