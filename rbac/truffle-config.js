@@ -23,7 +23,7 @@ const infuraKey = process.env.INFURA_KEY;
 const fs = require("fs");
 const path = require("path");
 const ganacheMnemonic =
-  "todo change this to something reasonable";
+  "album wire record stuff abandon mesh museum piece bean allow refuse below"
 
 function walletProvider(filepath) {
   if (fs.existsSync(filepath)) {

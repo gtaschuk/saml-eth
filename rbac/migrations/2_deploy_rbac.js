@@ -7,12 +7,12 @@ module.exports = (deployer, network, accounts) => {
     const rbac = await RBAC.deployed();
 
     // add the roles that users might have
-    await rbac.addUserRole("basic");
+    await rbac.addUserRole("employee");
     await rbac.addUserRole("hr");
     await rbac.addUserRole("ceo");
 
     // grant that role to the user who is deploying the contracts
     // the deploy user also has the ability to add other users to the RBAC
-    await rbac.grantRole(accounts[0], "basic_user");
+    await rbac.grantRole(accounts[0], "employee");
   });
 };

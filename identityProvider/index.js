@@ -7,9 +7,6 @@ const routes = require("./routes");
 const http = require("http");
 const bodyParser = require("body-parser");
 
-console.log("updated");
-
-//const origin = 'https://ranalyst.codefi.network'
 const allowedOrigins = ["http://localhost:3000", "http://localhost"];
 
 const corsOptions = {

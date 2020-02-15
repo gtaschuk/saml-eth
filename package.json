@@ -1,0 +1,26 @@
+{
+  "name": "saml-eth",
+  "version": "1.0.0",
+  "description": "SAML tools for Eth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cd ./identityProvider && yarn start",
+    "client": "cd ./client && yarn start",
+    "start": "concurrently \"yarn run server\" \"yarn run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gtaschuk/saml-eth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gtaschuk/saml-eth/issues"
+  },
+  "homepage": "https://github.com/gtaschuk/saml-eth#readme",
+  "dependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
