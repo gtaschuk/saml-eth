@@ -647,9 +647,85 @@
     "name": "solc",
     "version": "0.5.10+commit.5a6ea5b1.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "1581857036626": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0x18caec91a046fc4f04bac0f9b527fc592327c507d8ad2469aa560935f0ebfcb0"
+    }
+  },
   "schemaVersion": "3.0.22",
-  "updatedAt": "2020-02-15T21:55:46.570Z",
+  "updatedAt": "2020-02-16T12:45:10.334Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {
       "hasRole(address,string)": {

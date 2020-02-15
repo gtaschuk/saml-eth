@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "3box": "^1.17.0",
     "@types/lodash": "^4.14.149",
     "@types/node": "12.11.1",
     "babel-cli": "^6.26.0",
@@ -19,9 +20,11 @@
     "nodemon": "^2.0.2",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "samlp": "^3.4.1",
+    "samlp": "github:mcguinness/node-samlp",
     "typescript": "3.6.4",
-    "web3": "^1.2.5-rc.0"
+    "web3": "^1.2.5-rc.0",
+    "xml2js": "^0.4.23",
+    "zlib": "^1.0.5"
   },
   "scripts": {
     "build": "babel --presets es2015 -d lib/ src",

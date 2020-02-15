@@ -43,5 +43,5 @@ server.listen(port, () =>
   console.log("Express server listening on port " + server.address().port)
 );
 server.on("listening", () =>
-  console.log(`Listening on port ${server.address()}`)
+  console.log(`Listening on port ${server.address().port}`)
 );

@@ -5,7 +5,10 @@
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^2.0.2",
-    "saml2-js": "^2.0.5"
+    "saml2-js": "^2.0.5",
+    "samlp": "github:mcguinness/node-samlp",
+    "xml2js": "^0.4.23",
+    "zlib": "^1.0.5"
   },
   "scripts": {
     "build": "babel --presets es2015 -d lib/ src",

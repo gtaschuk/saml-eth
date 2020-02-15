@@ -1,4 +1,5 @@
 import samlp from 'samlp'
+//import Box from '3box'
 
 const IDP_PATHS = {
   SSO: '/saml/sso',
@@ -9,6 +10,9 @@ const IDP_PATHS = {
   //SETTINGS: '/settings'
 }
 const showUser = function (req, res, next) {
+  //const profile = await Box.get(req.user)
+  // generate metadata from 3box profile
+
   // Parse saml request using samlp and return user
   res.render('user', {
     user: req.user,

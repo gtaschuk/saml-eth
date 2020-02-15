@@ -40,7 +40,8 @@
     "lint": "eslint scripts",
     "lint:fix": "npm run lint -- --fix",
     "lint:sol": "solium -d ./contracts",
-    "console": "truffle console"
+    "console": "truffle console",
+    "networks": "truffle networks"
   },
   "husky": {
     "hooks": {
