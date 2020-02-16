@@ -18953,7 +18953,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.22",
-  "updatedAt": "2020-02-15T21:55:46.572Z",
+  "updatedAt": "2020-02-16T20:39:41.249Z",
   "devdoc": {
     "author": "TruSet",
     "details": "Use a bitmask to allow getting and setting of multiple roles in a single     transaction, to maintain lists/counts of users and roles, and to store an optional display name     for each user. *      Originally based on an openzeppelin implementation, this implements a similar interface using bitmasks     natively *      A maximum of 256 roles are supported, and roles cannot be removed once added.  *      Only supported roles can be queried, because this makes us \"fail fast\" if we make typos and it     helps us to alleviate concerns around \"look-a-like\" strings. (See     https://github.com/OpenZeppelin/openzeppelin-solidity/issues/1090)",

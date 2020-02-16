@@ -7,10 +7,18 @@ var samlp = require('samlp')
 var zlib = require('zlib')
 var Parser = require('xmldom').DOMParser
 var path = require('path')
+var mustacheExpress = require('mustache-express');
+app.engine('html', mustacheExpress());
+
+app.set('view engine', 'html');
+
+app.set('views', __dirname + '/views');
 
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Globals
 let name_id, session_index
@@ -59,7 +67,8 @@ app.post("/assert", function(req, res) {
   let buffer = Buffer.from(samlResponseParam, 'base64');
   let doc = new Parser().parseFromString(buffer.toString('utf8'))
   name_id = doc.getElementsByTagName('saml:NameID')[0].firstChild.data
-  res.send("Hi " + name_id + '\nSAML Response\n' + buffer.toString('utf8'));
+  //res.send("Hi " + name_id + '\nSAML Response\n' + buffer.toString('utf8'));
+  res.render('assertSuccess', {name: name_id, samlResponse: buffer.toString('utf8')})
 });
  
 // Starting point for logout
@@ -78,16 +87,16 @@ app.get("/logout", function(req, res) {
 
 app.get("/protected", function(req, res) {
   if (name_id) {
-    res.send("It worked #{name_id}")
+    res.render("authenticated");
   } else {
-    res.send("You are not logged in")
+    res.render("unauthenticated");
   }
 });
 
 
 
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "home.html"));
+  res.render("home");
 })
  
 app.listen(5000);

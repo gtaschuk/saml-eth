@@ -3,10 +3,11 @@
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
-  p {
-    margin: 20px 40px;
-    color: white;
-  }
+}
+
+.topnav > p {
+  margin: 20px 40px;
+  color: white;
 }
 
 .modale:before {
@@ -89,6 +90,9 @@
 .service.disabled {
   opacity: 0.6;
   cursor: default;
+}
+.service.active {
+  border: 2px solid;
 }
 .service > p {
   font-size: 24px;

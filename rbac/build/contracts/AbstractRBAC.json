@@ -20,15 +20,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.10+commit.5a6ea5b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_operator\",\"type\":\"address\"},{\"name\":\"_role\",\"type\":\"string\"}],\"name\":\"checkRole\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/greg/saml-eth/rbac/contracts/AbstractRBAC.sol\":\"AbstractRBAC\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/greg/saml-eth/rbac/contracts/AbstractRBAC.sol\":{\"keccak256\":\"0x8da2ec3882052a9e441c1f22e43359c928813be9a0678956ccc77851dd25c5f0\",\"urls\":[\"bzzr://5d79ab31c92fad64cf3bed66d916c7ef199d3005ba7a9692118de03234b40c0a\",\"dweb:/ipfs/QmfGwyXLpDu9eEjhJQP92YCyTnPvG4nC9ojkuLHgyKDQJs\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.10+commit.5a6ea5b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_operator\",\"type\":\"address\"},{\"name\":\"_role\",\"type\":\"string\"}],\"name\":\"checkRole\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/usr/src/app/contracts/AbstractRBAC.sol\":\"AbstractRBAC\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/usr/src/app/contracts/AbstractRBAC.sol\":{\"keccak256\":\"0x8da2ec3882052a9e441c1f22e43359c928813be9a0678956ccc77851dd25c5f0\",\"urls\":[\"bzzr://5d79ab31c92fad64cf3bed66d916c7ef199d3005ba7a9692118de03234b40c0a\",\"dweb:/ipfs/QmfGwyXLpDu9eEjhJQP92YCyTnPvG4nC9ojkuLHgyKDQJs\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity 0.5.10;\n\ninterface AbstractRBAC {\n  function checkRole(address _operator, string calldata _role) view external;\n  //function hasRole(address _operator, string calldata _role) view external returns (bool);\n  //function userExists(address _user) view external returns (bool);\n  //function newUser(address _addr, string calldata _display, uint _roles) external;\n  //function getUserDisplay(address _addr) view external returns (string memory);\n  //function grantRole(address user, string calldata roleName) external;\n  //function revokeRole(address user, string calldata roleName) external;\n  //function getUserRoleBitmask(address _addr) view external returns (uint);\n}\n",
-  "sourcePath": "/home/greg/saml-eth/rbac/contracts/AbstractRBAC.sol",
+  "sourcePath": "/usr/src/app/contracts/AbstractRBAC.sol",
   "ast": {
-    "absolutePath": "/home/greg/saml-eth/rbac/contracts/AbstractRBAC.sol",
+    "absolutePath": "/usr/src/app/contracts/AbstractRBAC.sol",
     "exportedSymbols": {
       "AbstractRBAC": [
         9
@@ -149,7 +149,7 @@
     "src": "0:683:0"
   },
   "legacyAST": {
-    "absolutePath": "/home/greg/saml-eth/rbac/contracts/AbstractRBAC.sol",
+    "absolutePath": "/usr/src/app/contracts/AbstractRBAC.sol",
     "exportedSymbols": {
       "AbstractRBAC": [
         9
@@ -275,7 +275,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.22",
-  "updatedAt": "2020-02-15T21:55:46.569Z",
+  "updatedAt": "2020-02-16T20:39:41.238Z",
   "devdoc": {
     "methods": {}
   },

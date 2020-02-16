@@ -18,7 +18,8 @@ const Centered = styled.div`
 const services = [
   {
     name: "Slack",
-    imgUrl: "https://cdn.freebiesupply.com/logos/large/2x/slack-logo-icon.png"
+    imgUrl:
+      "https://cdn.imgbin.com/14/7/15/imgbin-slack-logo-business-company-workflow-apps-orange-purple-and-teal-illustration-uYQk7jBPXFpTeq4EfRVcbuHBs.jpg"
   },
   {
     name: "Expensify",
@@ -39,6 +40,7 @@ const services = [
 
 export const LandingPage = () => {
   const [walletAddress, setWalletAddress] = useState(null);
+  const [service, setService] = useState(null);
   return (
     <div>
       <div class="topnav">
@@ -55,7 +57,12 @@ export const LandingPage = () => {
         <div className="services-container">
           {services.map(({ name, imgUrl }) => {
             return (
-              <div className={`service ${walletAddress ? "" : "disabled"}`}>
+              <div
+                className={`service ${walletAddress ? "" : "disabled"} ${
+                  service === name ? "active" : ""
+                }`}
+                onClick={() => setService(name)}
+              >
                 <p>{name}</p>
                 <Logo src={imgUrl} alt="" />
               </div>
@@ -64,7 +71,10 @@ export const LandingPage = () => {
         </div>
         <LoginText>Connect your hardware wallet to log in</LoginText>
         <Centered>
-          <HdWalletSetup setWalletAddress={setWalletAddress} />
+          <HdWalletSetup
+            setWalletAddress={setWalletAddress}
+            service={service}
+          />
         </Centered>
       </div>
     </div>

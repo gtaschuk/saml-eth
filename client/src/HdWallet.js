@@ -1,5 +1,5 @@
 import React, { useEffect, useState, Fragment } from "react";
-import { useLocation} from 'react-router-dom'
+import { useLocation } from "react-router-dom";
 import { Events, Keyring } from "@shapeshiftoss/hdwallet-core";
 import { WebUSBKeepKeyAdapter } from "@shapeshiftoss/hdwallet-keepkey-webusb";
 import axios from "axios";
@@ -11,23 +11,23 @@ const client = axios.create({
 
 const keyring = new Keyring();
 const keepkeyAdapter = WebUSBKeepKeyAdapter.useKeyring(keyring);
-window['keyring'] = keyring
+window["keyring"] = keyring;
 
 keyring.onAny((name, ...values) => {
-  const [[ deviceId, event ]] = values
-  const { from_wallet = false, message_type } = event
-  let direction = from_wallet ? "🔑" : "💻"
-  console.log(deviceId, `${direction} ${message_type}`, event)
-})
+  const [[deviceId, event]] = values;
+  const { from_wallet = false, message_type } = event;
+  let direction = from_wallet ? "🔑" : "💻";
+  console.log(deviceId, `${direction} ${message_type}`, event);
+});
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
-export const HdWalletSetup = () => {
-  let query = useQuery()
-  const qp = query.get('SAMLRequest')
-  console.log(qp)
+export const HdWalletSetup = ({ setWalletAddress, service }) => {
+  let query = useQuery();
+  const qp = query.get("SAMLRequest");
+  console.log(qp);
 
   const [keepKeyDeviceID, setKeepKeyDeviceID] = useState(null);
   const [keepKeyAddress, setKeepKeyAddress] = useState(null);
@@ -41,7 +41,10 @@ export const HdWalletSetup = () => {
   useEffect(() => {
     const initializeKeyKey = async () => {
       await keepkeyAdapter.initialize(undefined, true, false);
-      if (!keepKeyDeviceID) { console.log("DONT HAVE DEVICE ID"); return }
+      if (!keepKeyDeviceID) {
+        console.log("DONT HAVE DEVICE ID");
+        return;
+      }
       let wallet = keyring.get(keepKeyDeviceID);
 
       await wallet.transport.connect();
@@ -64,8 +67,11 @@ export const HdWalletSetup = () => {
 
     window["wallet"] = wallet;
     setStateWallet(wallet);
-    setKeepKeyDeviceID(await wallet.getDeviceID());
-    setAuthState('pending')
+    const deviceId = await wallet.getDeviceID();
+    console.log("setting the id!s");
+    setKeepKeyDeviceID(deviceId);
+    setWalletAddress(deviceId);
+    setAuthState("pending");
   };
 
   const signMessage = async e => {
@@ -80,30 +86,34 @@ export const HdWalletSetup = () => {
       accountIdx: 0
     })[0];
     try {
-      const message = "Signing into Identity Provider"
+      const message = "Signing into Identity Provider";
       const info = {
         addressNList: hard.concat(rel),
         message
       };
       setEthMessage("Sign the message on your device");
       let result = await stateWallet.ethSignMessage(info);
-      setEthMessage("Enter your PIN using the position of the numbers on your device");
+      setEthMessage(
+        "Enter your PIN using the position of the numbers on your device"
+      );
       setEthMessage(result.address + ", " + result.signature);
-      setKeepKeyAddress(result.address)
-      const { signature, address } = result
-      const samlRequest = query.get('SAMLRequest')
+      setKeepKeyAddress(result.address);
+      const { signature, address } = result;
+      const samlRequest = query.get("SAMLRequest");
 
-      const data = {address, message, signature, samlRequest}
+      const data = { address, message, signature, samlRequest };
 
-      await client.post("/saml/signIn", data)
-        .then(response => {
+      await client.post("/saml/signIn", data).then(
+        response => {
           //console.log("RESULT", response)
-          setAssertForm(response.data)
-          document.getElementsByName('hiddenform')[0].submit()
-        }, (error) => {
-          setAuthState('failed')
-          console.log("ERROR", error)
-        })
+          setAssertForm(response.data);
+          document.getElementsByName("hiddenform")[0].submit();
+        },
+        error => {
+          setAuthState("failed");
+          console.log("ERROR", error);
+        }
+      );
     } catch (error) {
       console.log(error);
     }
@@ -123,17 +133,18 @@ export const HdWalletSetup = () => {
 
   return (
     <div>
-      <button type="button" onClick={handleKeepKeyClick}>
-        Connect keep key
-      </button>
-      { Boolean(keepKeyDeviceID) && 
-      <Fragment>
-        <p>Your keep key device id is: {keepKeyDeviceID}</p>
-        <button type="button" onClick={signMessage}>
-          Log In
+      {!Boolean(keepKeyDeviceID) && (
+        <button type="button" onClick={handleKeepKeyClick}>
+          Connect keep key
         </button>
-      </Fragment>
-      }
+      )}
+      {Boolean(keepKeyDeviceID) && (
+        <Fragment>
+          <button type="button" onClick={signMessage} disabled={!service}>
+            Log In {!!service ? `to ${service}` : ""}
+          </button>
+        </Fragment>
+      )}
       <p>{ethMessage}</p>
       {showPinModal && (
         <div id="#pinModal" className="modale opened">
@@ -150,59 +161,59 @@ export const HdWalletSetup = () => {
                 onClick={() => handlePinDigit("7")}
                 className="button button-outline"
               >
-                  &#x25CF;
+                &#x25CF;
               </button>
               <button
                 onClick={() => handlePinDigit("8")}
                 className="button button-outline"
               >
-                  &#x25CF;
+                &#x25CF;
               </button>
               <button
                 onClick={() => handlePinDigit("9")}
                 className="button button-outline"
               >
-                  &#x25CF;
+                &#x25CF;
               </button>
-              <br/>
+              <br />
               <button
                 onClick={() => handlePinDigit("4")}
                 className="button button-outline"
               >
-                  &#x25CF;
+                &#x25CF;
               </button>
               <button
                 onClick={() => handlePinDigit("5")}
                 className="button button-outline"
               >
-                  &#x25CF;
+                &#x25CF;
               </button>
               <button
                 onClick={() => handlePinDigit("6")}
                 className="button button-outline"
               >
-                  &#x25CF;
+                &#x25CF;
               </button>
-              <br/>
+              <br />
               <button
                 onClick={() => handlePinDigit("1")}
                 className="button button-outline"
               >
-                  &#x25CF;
+                &#x25CF;
               </button>
               <button
                 onClick={() => handlePinDigit("2")}
                 className="button button-outline"
               >
-                  &#x25CF;
+                &#x25CF;
               </button>
               <button
                 onClick={() => handlePinDigit("3")}
                 className="button button-outline"
               >
-                  &#x25CF;
+                &#x25CF;
               </button>
-              <br/>
+              <br />
               <button
                 onClick={() => handlePinDigit("")}
                 className="button button-outline"
@@ -216,10 +227,10 @@ export const HdWalletSetup = () => {
                 Unlock
               </button>
             </div>
-            <div dangerouslySetInnerHTML={{__html: assertForm}} />
-            {(authState === 'failed') &&
-            <p>Authentication failed for address {keepKeyAddress}</p>
-            }
+            <div dangerouslySetInnerHTML={{ __html: assertForm }} />
+            {authState === "failed" && (
+              <p>Authentication failed for address {keepKeyAddress}</p>
+            )}
           </div>
         </div>
       )}

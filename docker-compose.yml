@@ -24,6 +24,8 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    volumes:
+      - ./rbac/build:/usr/src/app/build
   block-explorer:
     image: alethio/ethereum-lite-explorer
     environment:

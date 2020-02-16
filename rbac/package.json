@@ -1,5 +1,5 @@
 {
-  "name": "rbac-saml",
+  "name": "rbac",
   "version": "0.0.1",
   "private": true,
   "devDependencies": {

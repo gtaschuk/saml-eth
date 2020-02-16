@@ -1966,7 +1966,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.22",
-  "updatedAt": "2020-02-15T21:55:46.571Z",
+  "updatedAt": "2020-02-16T20:39:41.243Z",
   "devdoc": {
     "author": "TruSet",
     "details": "A maximum of 256 bits can be operated on when storing bits in a uint256, so the bitIndex is a uint8",
