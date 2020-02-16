@@ -30,11 +30,13 @@ export const HdWalletSetup = () => {
   console.log(qp)
 
   const [keepKeyDeviceID, setKeepKeyDeviceID] = useState(null);
+  const [keepKeyAddress, setKeepKeyAddress] = useState(null);
   const [ethMessage, setEthMessage] = useState(null);
   const [showPinModal, setShowPinModal] = useState(false);
   const [stateWallet, setStateWallet] = useState(null);
   const [pinDigits, setPinDigits] = useState("");
   const [assertForm, setAssertForm] = useState("");
+  const [authState, setAuthState] = useState("pending");
 
   useEffect(() => {
     const initializeKeyKey = async () => {
@@ -63,6 +65,7 @@ export const HdWalletSetup = () => {
     window["wallet"] = wallet;
     setStateWallet(wallet);
     setKeepKeyDeviceID(await wallet.getDeviceID());
+    setAuthState('pending')
   };
 
   const signMessage = async e => {
@@ -82,24 +85,25 @@ export const HdWalletSetup = () => {
         addressNList: hard.concat(rel),
         message
       };
+      setEthMessage("Sign the message on your device");
       let result = await stateWallet.ethSignMessage(info);
+      setEthMessage("Enter your PIN using the position of the numbers on your device");
       setEthMessage(result.address + ", " + result.signature);
-      console.log(result)
+      setKeepKeyAddress(result.address)
       const { signature, address } = result
       const samlRequest = query.get('SAMLRequest')
 
       const data = {address, message, signature, samlRequest}
-      console.log(data)
 
       await client.post("/saml/signIn", data)
         .then(response => {
-          console.log("RESULT", response)
+          //console.log("RESULT", response)
           setAssertForm(response.data)
           document.getElementsByName('hiddenform')[0].submit()
         }, (error) => {
+          setAuthState('failed')
           console.log("ERROR", error)
         })
-      // TODO handle error here
     } catch (error) {
       console.log(error);
     }
@@ -124,9 +128,9 @@ export const HdWalletSetup = () => {
       </button>
       { Boolean(keepKeyDeviceID) && 
       <Fragment>
-        <p>Your keep key address is: {keepKeyDeviceID}</p>
+        <p>Your keep key device id is: {keepKeyDeviceID}</p>
         <button type="button" onClick={signMessage}>
-          Sign message
+          Log In
         </button>
       </Fragment>
       }
@@ -213,6 +217,9 @@ export const HdWalletSetup = () => {
               </button>
             </div>
             <div dangerouslySetInnerHTML={{__html: assertForm}} />
+            {(authState === 'failed') &&
+            <p>Authentication failed for address {keepKeyAddress}</p>
+            }
           </div>
         </div>
       )}
