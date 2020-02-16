@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var samlp = require('samlp')
 var zlib = require('zlib')
 var Parser = require('xmldom').DOMParser
+var path = require('path')
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -86,7 +87,7 @@ app.get("/protected", function(req, res) {
 
 
 app.get("/", function(req, res) {
-  res.send("<h1>Service Provider</h1><a href='/login'>>> Click Here to Login <<</a>");
+  res.sendFile(path.join(__dirname, "home.html"));
 })
  
 app.listen(5000);
