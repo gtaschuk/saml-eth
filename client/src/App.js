@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { Route, BrowserRouter } from "react-router-dom";
 import axios from "axios";
+import { HDWallet } from "@shapeshiftoss/hdwallet-core";
+import { isKeepKey, KeepKeyHDWallet } from "@shapeshiftoss/hdwallet-keepkey";
+import { WebUSBKeepKeyAdapter } from "@shapeshiftoss/hdwallet-keepkey-webusb";
+import { Keyring } from "@shapeshiftoss/hdwallet-core";
+import { HdWalletSetup } from "./HdWallet";
+const keyring = new Keyring();
+
+const keepkeyAdapter = WebUSBKeepKeyAdapter.useKeyring(keyring);
 
 const client = axios.create({
   withCredentials: true,
@@ -9,8 +17,10 @@ const client = axios.create({
 
 const LandingPage = () => {
   const [message, setMessage] = useState(null);
+
   return (
     <div>
+      <HdWalletSetup />
       <button
         type="button"
         onClick={async () => {
