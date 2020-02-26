@@ -7,7 +7,7 @@ const routes = require("./routes");
 const http = require("http");
 const bodyParser = require("body-parser");
 
-const allowedOrigins = ["http://localhost:3000", "http://localhost"];
+const allowedOrigins = ["http://localhost:3000", "http://localhost:5000", "http://localhost:4000", "http://localhost"];
 
 const corsOptions = {
   origin: function(origin, callback) {

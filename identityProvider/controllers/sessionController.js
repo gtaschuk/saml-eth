@@ -51,7 +51,7 @@ const samlSignIn = (req, res, next, authnRequest, address) => {
 
 export const signIn = (req, res, next) => {
 
-  const web3Eth = new Web3('http://localhost:8545').eth
+  const web3Eth = new Web3(process.env.WEB3_PROVIDER || 'http://localhost:8545').eth
 
   //const signatureObject = {
     //message: 'Some data',

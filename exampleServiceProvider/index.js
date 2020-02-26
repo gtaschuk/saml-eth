@@ -34,10 +34,10 @@ var sp = new saml2.ServiceProvider(sp_options);
  
 // Create identity provider
 var idp_options = {
-  //sso_login_url: "http://localhost:4000/saml/signIn",
-  //sso_logout_url: "http://localhost:4000/saml/signOut",
   sso_login_url: "http://localhost:3000/saml/sso",
-  sso_logout_url: "http://localhost:8080/saml/slo",
+  sso_logout_url: "http://localhost:3000/saml/slo",
+  //sso_login_url: "http://localhost:8080/saml/sso",
+  //sso_logout_url: "http://localhost:8080/saml/slo",
   certificates: [fs.readFileSync("test-idp-cert.pem").toString()]
 };
 var idp = new saml2.IdentityProvider(idp_options);

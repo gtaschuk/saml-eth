@@ -943,10 +943,1120 @@
       "links": {},
       "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
       "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582735802564": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582736752831": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582737126802": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582737185368": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582737695003": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582737888335": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582738033629": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582738156793": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582738310875": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582738505559": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582738844279": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582740263975": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582741159145": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582741392875": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
+    },
+    "1582741765178": {
+      "events": {
+        "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "display",
+              "type": "string"
+            }
+          ],
+          "name": "DisplayChanged",
+          "type": "event",
+          "signature": "0xc41cf79d0bd803c363c5d71913bea40dcc929ba7c8d465c7f54841b84cd3d47c"
+        },
+        "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleAdded",
+          "type": "event",
+          "signature": "0xbfec83d64eaa953f2708271a023ab9ee82057f8f3578d548c1a4ba0b5b700489"
+        },
+        "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "RoleRemoved",
+          "type": "event",
+          "signature": "0xd211483f91fc6eff862467f8de606587a30c8fc9981056f051b897a418df803a"
+        },
+        "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "roleName",
+              "type": "string"
+            }
+          ],
+          "name": "NewSupportedRole",
+          "type": "event",
+          "signature": "0x73f400dc938ab740091a5472ddeea4415524efd651c787c43fdba981bf11133b"
+        }
+      },
+      "links": {},
+      "address": "0xb61752BB7c6E865037995334848276b53c4688c8",
+      "transactionHash": "0xf22443968b0e3500cdf48b6f2d3e93e639ec3472844444120865192742c9b5af"
     }
   },
   "schemaVersion": "3.0.22",
-  "updatedAt": "2020-02-16T20:49:28.852Z",
+  "updatedAt": "2020-02-26T18:29:55.040Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {

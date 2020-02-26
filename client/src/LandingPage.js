@@ -40,7 +40,7 @@ const services = [
 
 export const LandingPage = () => {
   const [walletAddress, setWalletAddress] = useState(null);
-  const [service, setService] = useState(null);
+  const [service, setService] = useState(services[0].name);
   return (
     <div>
       <div class="topnav">

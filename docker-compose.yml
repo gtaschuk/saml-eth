@@ -1,11 +1,17 @@
 version: '2.1'
 services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - '3000:80'
   identity-provider:
     build:
       context: ./identityProvider
       dockerfile: Dockerfile
     ports:
-      - '4000:8080'
+      - '8080:8080'
     environment:
       WEB3_PROVIDER: 'http://ganache:8545'
       # this needs to change when contracts change
@@ -32,3 +38,9 @@ services:
       APP_NODE_URL: http://localhost:8545
     ports:
       - '7000:80'
+  example-service-provider:
+    build:
+      context: ./exampleServiceProvider
+      dockerfile: Dockerfile
+    ports:
+      - '5000:5000'

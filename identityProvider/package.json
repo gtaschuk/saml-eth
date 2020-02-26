@@ -30,5 +30,8 @@
     "build": "babel --presets es2015 -d lib/ src",
     "start": "nodemon --exec babel-node index.js",
     "server": "node index.js"
+  },
+  "devDependencies": {
+    "babel-node": "^0.0.1-security"
   }
 }
