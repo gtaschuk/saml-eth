@@ -13,11 +13,35 @@ George Weiler
 
 This project implements a SAML identity provider, so organizations can manage users across Web2 and Web3.  This enables employees to sign into thousands of enterprise services via an ethereum wallet (we used the ShapeShift KeepKey) and enables organizations to manage in different groups.  The ethereum smart contract that manages user permissions is a bitmask-rbac - maintaining roles that an employee might have in an organization and providing a natively ethereum way to manage their interaction with Ethereum contracts.
 
+## Services
+
+This repo encompasses a few different services that are required for a full end-to-end test of the solution.  These services are defined in `docker-compose.yml`
+
+They include
+
+- identity-provider: the saml identity provider that enables ethereum key signing
+- client: the identity provider frontend that prompts you for sign in
+- ganache: a test chain
+- ganache-deploy: an ephemeral container that deploys the smart contracts onto the ganache test chain
+- block-explorer: a block explorer for the test chain
+- example-service-provider: an example app that would rely on this identity scheme for sign in
+
+## User Story
+
+An example local development login user story would be:
+
+User attempts to sign in to the example-service provider at `localhost:5000/`.  Clicking login takes them to `localhost:5000/login` which initiates a saml sign in request to the identity provider client: `localhost:3000/saml/sso?SAMLRequest=<encoded saml request>`.
+
+The identity-provider client guides the user through connecting their hardware wallet and signing a challenge message.  This request is given to the identity-provider backend, who verifies the user exists in the RBAC smart contract, gathers their groups from their smart contract rules, and merges their data with 3Box.
+
+The user is redirected back to the example-service-provider and is now able to access protected routes, such as `localhost:5000/protected`.
+
 ## Context
 
 This project was built for the Open Track of EthDenver
 
 This project uses a [Role Based Access Control](https://truset.github.io/bitmask-rbac/) to manage the roles a user might have in an organization (which can be made available to SAML Service Providers)
+
 
 ## Project Bounties
 
