@@ -19,7 +19,7 @@
     "husky": "^1.1.2",
     "jest-junit": "^3.1.0",
     "lint-staged": "^7.3.0",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.6.1",
     "openzeppelin-test-helpers": "^0.4.3",
     "prettier": "1.14.3",
     "solium": "^1.1.8"
